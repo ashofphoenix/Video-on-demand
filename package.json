@@ -1,0 +1,19 @@
+{
+  "name": "accedo-vod",
+  "version": "1.0.0",
+  "description": "Video On Demand Web App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashish Bhatt",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-carousel": "^1.0.2",
+    "angular-ui-carousel": "^0.1.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Music App</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="movies.js"></script>
+
+</head>
+
+<body ng-app="vod">            
+<div class="container-fluid" ng-controller="ListController">
+    <div class="col-md-3">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="search.song">
+      </p>
+
+
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div ng-repeat="slide in slides | filter:search">
+                <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                <div class="col-sm-3" >
+                    <div class="thumbnail">
+                        <img ng-src="{{slide.cover_image}}" alt="" height="400px" width="400px">
+                        <div class="caption"> <!-- caption -->
+                            <h3>{{slide.song}}</h3>
+                            <p>{{slide.artists}}</p>
+                            <p><audio ng-src="{{slide.url}}" controls></audio></p>
+                            <p><a href="#" class="btn btn-default" role="button">Add to Wishlist</a></p>  <!-- btn 2 -->
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
